@@ -38,7 +38,8 @@ SIM_OPTIONS   := -o vvp.exec -I "${VSRC_DIR}/core/" -I "${VSRC_DIR}/perips/" -D 
 
 SIM_EXEC      := #To-ADD: to add the simulatoin executable
 #SIM_EXEC      := vvp ${RUN_DIR}/vvp.exec -none # The free vvp is tooooo slow to run, so just comment it out, and replaced with the fake way below
-SIM_EXEC      := echo "Test Result Summary: PASS" # This is a fake run to just direct print PASS info to the log, the user need to actually replace it to the real EDA command
+SIM_EXEC      := vvp ${RUN_DIR}/vvp.exec # The free vvp is tooooo slow to run, so just comment it out, and replaced with the fake way below
+#SIM_EXEC      := echo "Test Result Summary: PASS" # This is a fake run to just direct print PASS info to the log, the user need to actually replace it to the real EDA command
 
 WAV_TOOL      := #To-ADD: to add the waveform tool
 WAV_OPTIONS   := #To-ADD: to add the waveform tool options 

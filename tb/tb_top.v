@@ -242,9 +242,13 @@ module tb_top();
   
   
   initial begin
-    $value$plusargs("DUMPWAVE=%d",dumpwave);
-    if(dumpwave != 0)begin
+    if($value$plusargs("DUMPWAVE=%d",dumpwave))begin
+      $display("DUMPWAVE=%d",dumpwave);
+      if(dumpwave != 0)begin
+        $dumpfile("test.vcd");
+        $dumpvars;
          // To add your waveform generation function
+      end
     end
   end
 
